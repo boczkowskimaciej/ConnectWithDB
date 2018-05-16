@@ -1,0 +1,4 @@
+
+    // connect with DB using JDBC- training
+    // TO DO: 1. input word from user, 2.Check is word exist in polish language
+    // 3. Add or not add word on local DB, 4. If add, check is word exist in local DB
