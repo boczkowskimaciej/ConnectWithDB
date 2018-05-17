@@ -51,6 +51,9 @@ public class DictionaryJDBC {
             Statement stmt = conn.createStatement();
             String sql = "INSERT INTO words(word) values "+ "('"+ inputWord +"');";
             stmt.execute(sql);
+
+            stmt.close();
+            conn.close();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
@@ -73,6 +76,10 @@ public class DictionaryJDBC {
                     return true;
                 }
             }
+
+            rs.close();
+            stmt.close();
+            conn.close();
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
